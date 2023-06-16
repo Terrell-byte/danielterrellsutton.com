@@ -1,9 +1,22 @@
 <script>
-    import TailwindCSS from './app.css';
+  import TailwindCSS from './app.css';
+  let y = 50;
 
-    
+  function handleScroll(event) {
+    const delta = Math.sign(event.deltaY);
+    y += delta;
+    if (y < 50) {
+      y = 50;
+    } else if (y > 100) {
+      y = 100;
+    }
+  }
+
+  window.addEventListener('wheel', handleScroll);
 </script>
 
-<main class="flex items-center justify-center bg-#FFFCF2" style="height: 50vh;">
-    <h1 class="text-4xl font-bold">Welcome to my website</h1>
-  </main>
+<main class="flex items-center justify-center h-screen">
+  <div class="w-{y} h-{y} flex flex-col items-center justify-center bg-#FFFCF2 shadow-lg transition-all duration-5000" style="width: {y}%; height: {y}%;">
+    <!-- Add your landing page elements here -->
+  </div>
+</main>
