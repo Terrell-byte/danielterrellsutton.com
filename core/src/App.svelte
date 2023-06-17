@@ -1,23 +1,28 @@
 <script>
   import TailwindCSS from './app.css';
-  import landingBg from './assets/portfolio_landing_bg.png';
-  let y = 50;
+  import { draw } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+  import { onMount } from 'svelte';
 
-  function handleScroll(event) {
-    const delta = Math.sign(event.deltaY);
-    y += delta;
-    if (y < 50) {
-      y = 50;
-    } else if (y > 100) {
-      y = 100;
-    }
-  }
+  let showLines = false
 
-  window.addEventListener('wheel', handleScroll);
+  onMount(() => {
+    setTimeout(() => {
+      showLines = true
+    }, 1000)
+  })
 </script>
 
-<main class="flex items-center justify-center h-screen">
-  <div class="w-{y} h-{y} flex flex-col items-center justify-center bg-#FFFCF2 shadow-lg transition-all duration-5000" style="width: {y}%; height: {y}%; position: relative;">
-    <img src={landingBg} alt="Portfolio Landing Background" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+
+<section class="w-full h-screen bg-#FFFCF2">
+  <div class="absolute top-0 left-0 w-full h-full object-cover">
+    <svg width="100%" height="100%" viewBox="0 0 3085 1953" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      {#if showLines}
+        <path transition:draw="{{duration: 5000, easing: quintOut}}" d="M3085 1811.64C2000.06 1811.64 2721.78 1027.28 2721.78 0.000151677M0 1426.57C957.576 1426.57 1207.58 1027.28 1207.58 0M688.701 1953C688.701 1655.56 1539.36 1580.92 1539.36 1953" stroke="#1E1E1E" stroke-opacity="0.06" stroke-width="252"/>
+      {/if}
+      </svg>
   </div>
-</main>
+</section>
+<section class="w-full h-screen bg-slate-700">
+  <!-- Add content for the second section here -->
+</section>
