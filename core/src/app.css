@@ -5,6 +5,7 @@
 :root {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
+  letter-spacing: 0.15em;
 
   color-scheme: light;
   color: #1E1E1E;
