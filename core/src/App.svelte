@@ -30,13 +30,16 @@
     backdrop-filter: blur( 11px );
     -webkit-backdrop-filter: blur( 11px );
     border-radius: 25px;
-}
+  }
+  .shadow-top {
+  box-shadow: 0px -17px 68px rgba(56, 56, 56, 0.37);
+  }
 </style>
 <!--Navbar-->
 <header class="fixed w-[80%] ml-[10%] mr-[10%] mt-[1%]">
   {#if showLanding}
   <nav transition:fade class={`flex justify-between items-center w-full pt-8 pb-8 transition-all duration-300 ${y > 16 && "glass"}`}>
-    <div class="pl-8">
+    <div class="pl-12">
       <svg class="w-40 h-auto -z-0" width="382" height="131" viewBox="0 0 382 131" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.84002 55.9999V3.00792H22.68C28.008 3.00792 32.544 3.79992 36.288 5.38392C40.032 6.96792 43.032 9.07992 45.288 11.7199C47.592 14.3599 49.272 17.3119 50.328 20.5759C51.384 23.8399 51.912 27.1279 51.912 30.4399C51.912 34.3759 51.192 37.9279 49.752 41.0959C48.36 44.2159 46.44 46.9039 43.992 49.1599C41.544 51.3679 38.712 53.0719 35.496 54.2719C32.28 55.4239 28.872 55.9999 25.272 55.9999H6.84002ZM17.28 45.9199H23.472C26.112 45.9199 28.512 45.5839 30.672 44.9119C32.832 44.1919 34.68 43.1599 36.216 41.8159C37.8 40.4719 39 38.7919 39.816 36.7759C40.68 34.7119 41.112 32.3599 41.112 29.7199C41.112 26.2639 40.536 23.4559 39.384 21.2959C38.28 19.0879 36.888 17.3839 35.208 16.1839C33.576 14.9839 31.896 14.1679 30.168 13.7359C28.44 13.2559 26.976 13.0159 25.776 13.0159H17.28V45.9199Z" fill="#1E1E1E"/>
         <path d="M63.1946 55.9999L87.0986 0.919922H87.6746L111.579 55.9999H99.4826L84.2186 17.2639L91.7786 12.0799L73.4906 55.9999H63.1946ZM79.5386 36.8479H95.4506L99.1226 45.6319H76.2986L79.5386 36.8479Z" fill="#1E1E1E"/>
@@ -72,7 +75,7 @@
         </li>
       </ul>
     </div>
-    <div class="pr-8">
+    <div class="pr-12">
       <button class=" text-[#1E1E1E] hover:text-[#535353] text-xl font-bold">
         Contact
       </button>
@@ -91,6 +94,7 @@
     </svg>
   </div>
   {#if showLanding}
+
   <div transition:fade class="flex justify-end items-center h-screen mr-[12%]">
     <img class="w-[30%]" src={profile} alt="profile" />
   </div>
@@ -98,6 +102,6 @@
 </section>
 
 <!--about-->
-<section class="w-full h-screen bg-[#FFFCF2] shadow-md-top">
+<section class="w-full h-screen bg-[#FFFCF2] shadow-top">
   <!-- Add content for the second section here -->
 </section>
