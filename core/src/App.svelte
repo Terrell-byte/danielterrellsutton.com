@@ -58,7 +58,7 @@
   }
 
   .rotate-counterclockwise {
-    animation: rotateCounterclockwise 25s linear infinite;
+    animation: rotateCounterclockwise 12s linear infinite;
   }
 
   .e-shadow {
