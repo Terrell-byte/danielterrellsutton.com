@@ -34,8 +34,35 @@
   .shadow-top {
   box-shadow: 0px -17px 68px rgba(56, 56, 56, 0.37);
   }
+
+  @keyframes rotateClockwise {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateCounterclockwise {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .rotate-clockwise {
+    animation: rotateClockwise 25s linear infinite;
+  }
+
+  .rotate-counterclockwise {
+    animation: rotateCounterclockwise 25s linear infinite;
+  }
+
   .e-shadow {
-    box-shadow: inset 0px 12px 12px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 12px 12px rgba(56, 56, 56, 0.37));
   }
 </style>
 <!--Navbar-->
@@ -111,21 +138,20 @@
       </span>
       <button class="group relative h-12 w-32 overflow-hidden rounded-full text-lg shadow-2xl mt-8">
         <div class="absolute inset-0 w-0 bg-[#F0855B] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-        <span class="relative text-[#F0855B] group-hover:text-white">Let's talk!</span>
+        <span class="relative text-[#F0855B] group-hover:text-white text-bold ">Let's talk!</span>
       </button>
     </div>
     <img class="w-[30%] mr-[10%]" src={profile} alt="profile" />    
   </div>
-  <div class="absolute top-0 right-0 mt-[6%] mr-[7%]">
-    <svg class="w-20 h-auto" width="177" height="183" viewBox="0 0 177 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="absolute top-0 right-0 mt-[6%] mr-[7%] rotate-clockwise">
+    <svg class="w-20 h-auto e-shadow" width="177" height="183" viewBox="0 0 177 183" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M19.9324 67.0753L105.796 8.35978C135.662 -12.0637 176.197 9.32337 176.197 45.5053V137.928C176.197 169.64 144.272 191.404 114.753 179.816L28.8896 146.109C-4.73571 132.909 -9.88593 87.4658 19.9324 67.0753Z" fill="#F0855B"/>
     </svg>
   </div>
-  <div class="absolute top-0 right-0 mt-[16%] mr-[5%]">
-    <svg class="w-12 h-auto" width="67" height="73" viewBox="0 0 67 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="absolute top-0 right-0 mt-[16%] mr-[5%] rotate-counterclockwise">
+    <svg class="w-12 h-auto e-shadow" width="67" height="73" viewBox="0 0 67 73" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M26.5143 1.29635L50.7212 7.43994C62.3422 10.3893 69.0688 22.905 65.3635 34.6837L58.2807 57.1997C52.8335 74.5161 30.2765 77.3837 21.045 61.9335L3.92087 33.2739C-5.78567 17.0287 8.55095 -3.26264 26.5143 1.29635Z" fill="#F0855B"/>
       </svg>
-      
   </div>
 
   {/if}
