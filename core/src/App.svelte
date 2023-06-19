@@ -8,7 +8,6 @@
 
   let showLines = false;
   let showLanding = false;
-  let showNav = false;
   let y = 0;
 
   onMount(() => {
@@ -128,7 +127,7 @@
 
   <div transition:fade class="flex justify-between items-center h-screen w-full">
     <div class="ml-[10%] ">
-      <h1 class="text-4xl font-normal text-[#565553] pb-4">Hi, I'm, Daniel</h1>
+      <h1 class="text-4xl font-normal text-[#565553] pb-4">Hi, I'm Daniel</h1>
       <h2 class="text-8xl font-bold text-[#F0855B]">Software</h2>
       <h2 class="text-8xl font-bold text-[#F0855B] pb-4">Engineer</h2>
       <span class="text-4xl font-normal italic text-[#1E1E1E]">
