@@ -143,7 +143,7 @@
     </div>
     <img class="w-[30%] mr-[10%]" src={profile} alt="profile" />    
   </div>
-  <div class="absolute top-0 right-0 mt-[6%] mr-[7%] rotate-clockwise">
+  <div class="absolute top-0 right-0 mt-[7%] mr-[7%] rotate-clockwise">
     <svg class="w-20 h-auto e-shadow" width="177" height="183" viewBox="0 0 177 183" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M19.9324 67.0753L105.796 8.35978C135.662 -12.0637 176.197 9.32337 176.197 45.5053V137.928C176.197 169.64 144.272 191.404 114.753 179.816L28.8896 146.109C-4.73571 132.909 -9.88593 87.4658 19.9324 67.0753Z" fill="#F0855B"/>
     </svg>
