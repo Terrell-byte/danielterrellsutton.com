@@ -4,7 +4,8 @@
   import { quintOut } from 'svelte/easing';
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
-  import profile from './assets/profile.png';
+  import profile from '/public/profile.png';
+
 
   let showLines = false;
   let showLanding = false;
@@ -20,50 +21,6 @@
   });
 </script>
 
-<svelte:window bind:scrollY={y} />
-
-<style>
-  .glass {
-    background: rgba( 255, 255, 255, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
-    backdrop-filter: blur( 11px );
-    -webkit-backdrop-filter: blur( 11px );
-    border-radius: 25px;
-  }
-  .shadow-top {
-  box-shadow: 0px -17px 68px rgba(56, 56, 56, 0.37);
-  }
-
-  @keyframes rotateClockwise {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotateCounterclockwise {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-
-  .rotate-clockwise {
-    animation: rotateClockwise 25s linear infinite;
-  }
-
-  .rotate-counterclockwise {
-    animation: rotateCounterclockwise 12s linear infinite;
-  }
-
-  .e-shadow {
-    filter: drop-shadow(0px 12px 12px rgba(56, 56, 56, 0.37));
-  }
-</style>
 <!--Navbar-->
 <header class="fixed w-[84%] ml-[8%] mr-[8%] mt-[1%] z-10">
   {#if showLanding}
@@ -105,8 +62,8 @@
       </ul>
     </div>
     <div class="pr-10">
-      <button class="group relative h-12 w-32 overflow-hidden rounded-full text-bold shadow-2xl">
-        <div class="absolute inset-0 w-0 bg-[#F0855B] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+      <button class="group relative h-12 w-32 overflow-hidden rounded-xl text-bold shadow-2xl">
+        <div class="absolute inset-0 w-0 bg-[#BB1214] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
         <span class="relative text-[#1E1E1E] group-hover:text-white">Contact</span>
       </button>
     </div>
@@ -125,46 +82,24 @@
   </div>
   {#if showLanding}
 
-  <div transition:fade class="flex justify-between items-center h-screen w-full">
-    <div class="ml-[10%] ">
-      <h1 class="text-4xl font-normal text-[#565553] pb-4">Hi, I'm Daniel</h1>
-      <h2 class="text-8xl font-bold text-[#F0855B]">Software</h2>
-      <h2 class="text-8xl font-bold text-[#F0855B] pb-4">Engineer</h2>
-      <span class="text-4xl font-normal italic text-[#1E1E1E]">
-        I have a passion for creating<br>
-        innovative and engaging<br>
-        projects.<br>
-      </span>
-      <button class="group relative h-12 w-32 overflow-hidden rounded-full text-lg shadow-2xl mt-8">
-        <div class="absolute inset-0 w-0 bg-[#F0855B] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-        <span class="relative text-[#F0855B] group-hover:text-white text-bold ">Let's talk!</span>
-      </button>
-    </div>
-    <img class="w-[33%] mr-[10%]" src={profile} alt="profile" />    
-  </div>
-  <div class="absolute top-0 right-0 mt-[7%] mr-[5%] rotate-clockwise">
-    <svg class="w-20 h-auto e-shadow" width="177" height="183" viewBox="0 0 177 183" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19.9324 67.0753L105.796 8.35978C135.662 -12.0637 176.197 9.32337 176.197 45.5053V137.928C176.197 169.64 144.272 191.404 114.753 179.816L28.8896 146.109C-4.73571 132.909 -9.88593 87.4658 19.9324 67.0753Z" fill="#F0855B"/>
-    </svg>
-  </div>
-  <div class="absolute top-0 right-0 mt-[16%] mr-[3%] rotate-counterclockwise">
-    <svg class="w-12 h-auto e-shadow" width="67" height="73" viewBox="0 0 67 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M26.5143 1.29635L50.7212 7.43994C62.3422 10.3893 69.0688 22.905 65.3635 34.6837L58.2807 57.1997C52.8335 74.5161 30.2765 77.3837 21.045 61.9335L3.92087 33.2739C-5.78567 17.0287 8.55095 -3.26264 26.5143 1.29635Z" fill="#F0855B"/>
+  <div class="flex flex-col justify-center h-full ml-[10%]">
+    <h1 class="text-8xl font-bold text-[#1E1E1E]">Hi,</h1>
+    <h1 class="text-8xl font-bold text-[#1E1E1E]">I'm <span class="text-[#BB1214]">Daniel</span></h1>
+
+    <h2 class="text-3xl font-semibold text-[#1E1E1E] mt-2">Software Engineer</h2>
+
+    <button type="button" class="text-white w-36 mt-5 bg-[#BB1214] hover:bg-[#BB1214] font-medium rounded-xl text-sm px-5 py-2.5 text-center inline-flex items-center">
+      Learn More
+      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
       </svg>
+    </button>
   </div>
 
+  <div class="flex flex-col items-center justify-center">
+    <img class="w-[700px] absolute bottom-0 h-auto" src={profile} alt="profile" />
+  </div>
+ 
   {/if}
 </section>
 
-<!--about-->
-<section class="w-full h-screen bg-[#FFFCF2] shadow-top">
-  <!-- Add content for the second section here -->
-</section>
-<!--Skills-->
-<section class="w-full h-screen bg-[#FFFCF2] shadow-top">
-  <!-- Add content for the second section here -->
-</section>
-<!--Contact-->
-<section class="w-full h-screen bg-[#FFFCF2] shadow-top">
-  <!-- Add content for the second section here -->
-</section>
