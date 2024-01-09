@@ -39,10 +39,10 @@ html, body {
   list-style-type: none;
   overflow: hidden;
   position: -webkit-sticky; /* Safari */
-  margin: 0;
+  margin: 1rem 0 0 0;
   top: 0;
   padding-left: 0;
-  padding-top: 1.5rem;
+  padding: 1rem;
   width: 75%;
   position: fixed;
   z-index: 10;
@@ -253,4 +253,12 @@ html, body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
+}
+
+.glass {  
+  background: rgba(255, 252, 242, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
 }

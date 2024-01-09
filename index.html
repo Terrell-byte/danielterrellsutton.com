@@ -75,4 +75,14 @@
     </div>
 
   </body>
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 16) {
+        navbar.classList.add('glass');
+      } else {
+        navbar.classList.remove('glass');
+      }
+    });
+  </script>
 </html>
