@@ -41,16 +41,28 @@ html, body {
   position: -webkit-sticky; /* Safari */
   margin: 1rem 0 0 0;
   top: 0;
-  padding-left: 0;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0.5rem;
   width: 75%;
-  position: fixed;
+  position: absolute;
   z-index: 10;
+  transition: all 0.3s ease-in-out; /* This will animate the changes */
+  opacity: 1;
+}
+.fixed {
+  position: fixed;
+}
+.glass {  
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
 }
 
 .navbar li {
   display: flex;
   text-align: center;
+  
 }
 
 .nav-item {
@@ -62,6 +74,7 @@ html, body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
+  
 }
 .navbar li a:hover {
   color: #CA2E30;
@@ -86,6 +99,18 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar a, .navbar button, .navbar .logo {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.navbar.fade a, .navbar.fade button, .navbar.fade .logo {
+  opacity: 0;
+}
+.navbar.glass a, .navbar.glass button, .navbar.glass .logo {
+  opacity: 1;
+}
+
 .pushable {
   position: relative;
   border: none;
@@ -255,10 +280,3 @@ html, body {
   text-align: center;
 }
 
-.glass {  
-  background: rgba(255, 252, 242, 0.5);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-}
