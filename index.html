@@ -65,15 +65,24 @@
         </div>
       </div>
     </div>
-    <div class="about-container">
+    <div class="about-container" id="about">
       <div class="margin-sides">
         <h1 class="about-h1">Behind the Scenes</h1>
       </div>
       <div class="margin-sides">
         <p class="about-p">Welcome! I'm Daniel Sutton, a dedicated Full Stack .NET Developer with a robust blend of skills in software development and design. Currently enhancing my expertise at the Danish Technical University, I have developed a profound proficiency in a range of technologies including C#, Docker, Rust, Python, and web development. My experience as a software developer student assistant has equipped me with a practical understanding of diverse programming environments and challenges. In addition to my technical abilities, I possess a strong passion for integrating Artificial Intelligence into software solutions, aiming to create more intuitive and intelligent applications. Driven by a commitment to excellence in software creation, I am always on the lookout for new opportunities to refine my skills and stay abreast of the latest technological trends and advancements.</p>       
       </div>
+      <a href="/DanielCV.pdf" download>
+        <button class="pushable">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">
+            Download CV
+          </span>
+        </button>
+      </a>
     </div>
-    <div class="portfolio-container">
+    <div class="portfolio-container" id="portfolio">
       <div class="margin-sides">
         <h1 class="portfolio-h1">My Work</h1>
         <div class="black-rectangle"></div>
@@ -85,6 +94,23 @@
 
   </body>
   <script>
+    // Select all navbar items
+    var navbarItems = document.querySelectorAll('.navbar a');
+
+    // Add click event listener to each navbar item
+    navbarItems.forEach(function(navbarItem) {
+      navbarItem.addEventListener('click', function(event) {
+        // Prevent default action
+        event.preventDefault();
+
+        // Get the target section
+        var targetSection = document.querySelector(this.getAttribute('href'));
+
+        // Smoothly scroll to the target section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
     var lastScrollTop = 0;
 
     window.addEventListener('scroll', function() {
