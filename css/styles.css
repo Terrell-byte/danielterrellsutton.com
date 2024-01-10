@@ -204,18 +204,22 @@ html, body {
   height: 100vh;
   margin: 0 1rem 0 1rem;
   font-family: 'Josefin Sans', sans-serif;
+
 }
 .home-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  z-index: 10;
 }
 .home-paragraph {
   font-size: 1.5rem;
+  font-weight: 400;
   color: #1E1E1E;
   margin-bottom: 2rem;
   width: 20rem;
+  z-index: 10;
 }
 .black-rectangle {
   width: 80px;
@@ -226,13 +230,15 @@ html, body {
   font-size: 7rem;
   font-weight: 600;
   color: #1E1E1E;
-  margin: 0 -5px; /* Adjust this value to increase or decrease the space */
+  margin: 0 -5px; 
+  z-index: 10;
 }
 .home-title-2 {
   font-size: 1.8rem;
   font-weight: bold;
   color: #1E1E1E;
   margin: 0.5rem 0;
+  z-index: 10;
 }
 .red-text {
   color: red; /* Replace 'red' with your red color */
@@ -271,13 +277,30 @@ html, body {
 }
 
 .about-p {
-  font-size: 1.95rem;
+  font-size: 1.5rem;
   font-weight: 100;
-  line-height: 3rem;
+  line-height: 2.25rem;
   color: #FFFCF2;
   margin: 0;
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
 }
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.portfolio-h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #1E1E1E;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
 
