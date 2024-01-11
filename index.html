@@ -41,8 +41,8 @@
             </path>
           </svg>
         </div></li>
-        <li><a class="nav-item" href="#about">About</a></li>
-        <li><a class="nav-item" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-item smooth-scroll" href="#about">About</a></li>
+        <li><a class="nav-item smooth-scroll" href="#portfolio">Portfolio</a></li>
         <li><a href="https://www.linkedin.com/in/danieltsutton/"><button><img src="/linkedin-square-icon.svg" alt="Social media icon" width="35" height="35"/></button></a></li>
         <li><a href="https://twitter.com/Terrell_byte"><button><img src="/x-social-media-round-icon.svg" alt="Social media icon" width="35" height="35"/></button></a></li>
       </ul>
@@ -138,12 +138,12 @@
 
   </body>
   <script>
-    // Select all navbar items
-    var navbarItems = document.querySelectorAll('.navbar a');
+    // Select the anchor tags with the "smooth-scroll" class
+    var smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
 
-    // Add click event listener to each navbar item
-    navbarItems.forEach(function(navbarItem) {
-      navbarItem.addEventListener('click', function(event) {
+    // Add click event listener to each link
+    smoothScrollLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
         // Prevent default action
         event.preventDefault();
 
