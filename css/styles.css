@@ -340,7 +340,7 @@ html, body {
 }
 
 .card > .row {
-  color: white;
+  color: #FFFCF2;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -368,16 +368,22 @@ html, body {
   transform: translateY(30px);
   transition-delay: .3s;
   transition: all .3s ease;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .description p {
-  color: #b0b0ba;
+  color: #FFFCF2;
   padding-top: 5px;
+  font-weight: 300;
+  font-size: 1.25rem;
 }
 
 .description h4 {
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 input {
@@ -393,16 +399,12 @@ input:checked + label .description {
   transform: translateY(0) !important;
 }
 
-.card[for="c1"] {
-  background-image: url('./img1.jpeg');
-}
-.card[for="c2"] {
-  background-image: url('./img2.jpeg');
-}
-.card[for="c3"] {
-  background-image: url('./img3.jpeg');
-}
-.card[for="c4"] {
-  background-image: url('./img4.jpeg');
-}
 
+.dockerbase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
