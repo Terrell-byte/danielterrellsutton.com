@@ -1,3 +1,4 @@
+/* Global styling */
 html, body {
   height: 100vh;
   margin: 0;
@@ -7,6 +8,8 @@ html, body {
   margin-left: 12.5%;
   margin-right: 12.5%;
 }
+
+/* Background styling */
 .background-container {
   position: fixed;
   width: 100vw;
@@ -32,6 +35,8 @@ html, body {
     stroke-dashoffset: 0;
   }
 }
+
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -111,6 +116,7 @@ html, body {
   opacity: 1;
 }
 
+/* CV button styling */
 .pushable {
   position: relative;
   border: none;
@@ -195,6 +201,8 @@ html, body {
 .pushable:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* Home styling */
 .home-container {
   display: flex;
   position: relative;
@@ -222,7 +230,7 @@ html, body {
 .black-rectangle {
   width: 80px;
   height: 8px;
-  background-color: black;
+  background-color: #1E1E1E;
 }
 .home-title-1 {
   font-size: 7rem;
@@ -255,6 +263,8 @@ html, body {
   max-height: 100%; 
   object-fit: cover; 
 }
+
+/* About styling */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -282,6 +292,8 @@ html, body {
   padding-bottom: 3rem;
   text-align: center;
 }
+
+/* Portfolio styling */
 .portfolio-container {
   display: flex;
   flex-direction: column;
