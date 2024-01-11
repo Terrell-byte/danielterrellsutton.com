@@ -58,7 +58,7 @@ html, body {
 }
 .glass {  
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
+  border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
@@ -133,7 +133,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 2rem;
   background: hsl(0deg 0% 0% / 0.25);
   will-change: transform;
   transform: translateY(2px);
@@ -148,7 +148,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 2rem;
   background: linear-gradient(
     to left,
     hsl(340deg 100% 16%) 0%,
@@ -161,7 +161,7 @@ html, body {
   display: block;
   position: relative;
   padding: 12px 42px;
-  border-radius: 12px;
+  border-radius: 2rem;
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   color: white;
@@ -232,6 +232,11 @@ html, body {
   height: 8px;
   background-color: #1E1E1E;
 }
+.white-rectangle {
+  width: 80px;
+  height: 8px;
+  background-color: #FFFCF2;
+}
 .home-title-1 {
   font-size: 7rem;
   font-weight: 600;
@@ -298,8 +303,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  margin-top: 5rem;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -325,8 +329,8 @@ html, body {
 }
 
 .card {
-  width: 9rem;
-  border-radius: .75rem;
+  width: 8rem;
+  min-width: 82.5px;
   background-size: cover;
   cursor: pointer;
   overflow: hidden;
@@ -334,6 +338,7 @@ html, body {
   margin-right: 1rem;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   background-color: #1E1E1E;
@@ -341,16 +346,18 @@ html, body {
 
 .card > .row {
   color: #FFFCF2;
-  display: flex;
   flex-wrap: nowrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .card > .row > .icon {
   background: #CA2E30;
   color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  border-radius: 2rem;
+  width: 3.275rem;
+  height: 3.275rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,9 +381,10 @@ html, body {
 
 .description p {
   color: #FFFCF2;
-  padding-top: 5px;
   font-weight: 300;
   font-size: 1.25rem;
+  margin: 1rem 0 1rem 0;
+
 }
 
 .description h4 {
@@ -399,7 +407,15 @@ input:checked + label .description {
   transform: translateY(0) !important;
 }
 
-
+/* Logo styling */
+.project-scarif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  width: 20rem;
+}
 .dockerbase {
   display: flex;
   flex-direction: column;
@@ -407,4 +423,131 @@ input:checked + label .description {
   align-items: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  width: 34rem;
+}
+.openbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  width: 25rem;
+}
+
+.neovim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-right: 3rem;
+  width: 18rem;
+}
+
+.github-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.github-language {
+  display: flex;
+}
+
+
+.github-language li {
+  display: flex; 
+  width: 3rem; 
+  margin: 0 1.5rem 0 1.5rem;
+}
+
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.bullet-point {
+  color: red; /* Set color of bullet points */
+  margin-right: 5px; /* Add some space between the bullet point and the text */
+}
+
+.language-stats {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.language-bar {
+  display: flex;
+  background-color: #ddd;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.language-segment {
+  height: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.language-segment:hover {
+  opacity: 0.7;
+}
+
+.csharp {
+  background-color: #5b9bd5;
+}
+
+.python {
+  background-color: #ffdd44;
+}
+
+.shell {
+  background-color: #4d4d4d;
+}
+
+.plpgsql {
+  background-color: #336791;
+}
+
+.dockerfile {
+  background-color: #384d54;
+}
+
+.lua {
+  background-color: #000080;
+}
+
+
+/* Contact styling */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #1E1E1E;
+}
+.contact-h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+.contact-p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 2.25rem;
+  color: #FFFCF2;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
