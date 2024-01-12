@@ -207,7 +207,6 @@ html, body {
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   height: 100vh;
   margin: 0 1rem 0 1rem;
@@ -550,4 +549,18 @@ ul {
   margin: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+/* Styles for tablet */
+@media screen and (max-width: 1200px) {
+    .profile-image {
+    display: none;
+  }
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 480px) {
+  .profile-image {
+    display: none;
+  }
 }
