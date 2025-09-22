@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Linkedin, Mail, ExternalLink, Database, Brain, Server, Wallpaper, ChevronDown, GithubIcon } from "lucide-react"
+import { Github, Linkedin, Mail, Database, Brain, Server, Wallpaper, ChevronDown } from "lucide-react"
 
 export default function Portfolio() {
   return (
@@ -15,25 +15,45 @@ export default function Portfolio() {
             <div className="text-xl font-bold text-slate-900 dark:text-white">Daniel Sutton</div>
             <div className="hidden md:flex space-x-8">
               <a
-                onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                onClick={() => {
+                  const element = document.getElementById('about');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
                 className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 About
               </a>
               <a
-                onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                onClick={() => {
+                  const element = document.getElementById('skills');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
                 className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Skills
               </a>
               <a
-                onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                onClick={() => {
+                  const element = document.getElementById('projects');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
                 className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Projects
               </a>
               <a
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
                 className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Contact
@@ -87,11 +107,11 @@ export default function Portfolio() {
                 </Badge>
               </div>
               <div className="flex gap-4">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700" onClick={() => window.open("mailto:danieltsutton@outlook.com", "_blank")}>
                   <Mail className="mr-2 h-4 w-4" />
                   Get In Touch
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={() => window.open("", "_blank")}>
                   Download CV
                 </Button>
               </div>
