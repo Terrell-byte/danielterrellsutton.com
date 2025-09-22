@@ -176,7 +176,7 @@ export default function Portfolio() {
             Hey there! I'm Daniel, a software engineer with a knack for AI, a love for solving 
             real-world puzzles, and a belief that every tough challenge is just a series of small
             wins waiting to happen. I'm all about diving into new tech and growing every day. 
-            I've crafted machine learning models that do more than just crunch numbers,they 
+            I've crafted machine learning models that do more than just crunch numbers, they 
             help uncover patterns and tell stories hidden in data.
             </p>
             <p className="text-center leading-relaxed mt-6">
