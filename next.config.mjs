@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
-
-export default nextConfig
+  output: 'export',              // generate static files in /out
+  images: { unoptimized: true }, // disable Next image optimizer
+  assetPrefix: '',               // keep root (custom domain)
+  trailingSlash: false
+};
+export default nextConfig;
