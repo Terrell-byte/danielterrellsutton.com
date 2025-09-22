@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Linkedin, Mail, ExternalLink, Database, Brain, Server, Wallpaper, ChevronDown } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Database, Brain, Server, Wallpaper, ChevronDown, GithubIcon } from "lucide-react"
 
 export default function Portfolio() {
   return (
@@ -15,35 +15,35 @@ export default function Portfolio() {
             <div className="text-xl font-bold text-slate-900 dark:text-white">Daniel Sutton</div>
             <div className="hidden md:flex space-x-8">
               <a
-                href="#about"
-                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 About
               </a>
               <a
-                href="#skills"
-                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Skills
               </a>
               <a
-                href="#projects"
-                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Projects
               </a>
               <a
-                href="#contact"
-                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Contact
               </a>
             </div>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" onClick={() => window.open("https://github.com/terrell-byte", "_blank")}>
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" onClick={() => window.open("https://www.linkedin.com/in/danieltsutton/", "_blank")}>
                 <Linkedin className="h-5 w-5" />
               </Button>
             </div>
@@ -153,14 +153,18 @@ export default function Portfolio() {
           </div>
           <div className="prose prose-lg max-w-none text-slate-600 dark:text-slate-300">
             <p className="text-center leading-relaxed">
-              I'm a dedicated software engineer specializing in backend development and machine learning. Currently
-              pursuing advanced studies at Danish Technical University, I've developed expertise in building robust,
-              scalable systems and implementing AI solutions that drive business value.
+            Hey there! I'm Daniel, a software engineer with a knack for AI, a love for solving 
+            real-world puzzles, and a belief that every tough challenge is just a series of small
+            wins waiting to happen. I'm all about diving into new tech and growing every day. 
+            I've crafted machine learning models that do more than just crunch numbers,they 
+            help uncover patterns and tell stories hidden in data.
             </p>
             <p className="text-center leading-relaxed mt-6">
-              My experience spans from designing microservices architectures to developing deep learning models for
-              computer vision and NLP applications. I'm passionate about clean code, system design, and staying at the
-              forefront of technological innovation.
+            I thrive in teams where everyone brings their own specialty and we can bounce ideas off 
+            each other without getting lost in endless meetings. I also like to keep things light, 
+            because good work happens when people actually enjoy working together. If you're looking 
+            for someone who's not just about ticking off skills but actually loves the journey of 
+            learning, innovating, and having a bit of fun along the way, let's chat.
             </p>
           </div>
         </div>
@@ -268,10 +272,7 @@ export default function Portfolio() {
                     Flutter
                   </Badge>
                   <Badge variant="outline" className="mr-2 mb-2">
-                    Tailwind CSS
-                  </Badge>
-                  <Badge variant="outline" className="mr-2 mb-2">
-                    TypeScript
+                    Unity
                   </Badge>
                   <Badge variant="outline" className="mr-2 mb-2">
                     ASP.NET
@@ -297,25 +298,11 @@ export default function Portfolio() {
                   <div>
                     <CardTitle className="text-xl mb-2">ML-Powered Stock Analyzer</CardTitle>
                     <CardDescription className="text-base">
-                      Intelligent trading system using deep learning for market prediction and automated portfolio
-                      management
+                    A comprehensive API for real-time stock market analysis, leveraging a neural network model for stock prediction using diverse financial data, achieving 95% accuracy in initial tests
                     </CardDescription>
                   </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
+                  <div className="ml-4 flex-shrink-0">
+                    <img src="/runah-vector.png" alt="Runah" className="h-8 w-auto cursor-pointer hover:scale-110 transition-all duration-300" onClick={() => window.open("https://runah.io", "_blank")} />
                   </div>
                 </div>
               </CardHeader>
@@ -329,67 +316,53 @@ export default function Portfolio() {
                       TensorFlow
                     </Badge>
                     <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
-                      FastAPI
+                      Flask
                     </Badge>
                     <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
-                      PostgreSQL
+                      Redis
                     </Badge>
                     <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
-                      Docker
+                      Polygon.io
                     </Badge>
                   </div>
                   <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <li>• LSTM networks for time series prediction with 85% accuracy</li>
-                    <li>• Real-time data processing pipeline handling 10k+ events/sec</li>
-                    <li>• Microservices architecture with automated deployment</li>
-                    <li>• Risk management system with dynamic position sizing</li>
+                    <li>• 95% accuracy in initial tests</li>
+                    <li>• Real-time financial data integration</li>
+                    <li>• Comprehensive technical analysis engine</li>
+                    <li>• Redis-caching for real-time performance</li>
+                    <li>• TensorFlow-based deep learning prediction models</li>
                   </ul>
                 </div>
               </CardContent>
             </Card>
-
+            {/* Zero Knowledge Project */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-xl mb-2">Distributed ML Platform</CardTitle>
+                    <CardTitle className="text-xl mb-2">Zero-Knowledge Protocol Authentication</CardTitle>
                     <CardDescription className="text-base">
-                      Scalable platform for training and deploying machine learning models across multiple cloud
-                      providers
+                      An exploration into Zero Knowledge Proofs, demonstrating secure authentication and privacy-preserving data exchange.
                     </CardDescription>
                   </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
+                  <div className="ml-4 flex-shrink-0">
+                    <img src="/hird-vector.jpeg" alt="Hird" className="h-8 w-auto cursor-pointer hover:scale-110 transition-all duration-300" onClick={() => window.open("https://hird.io", "_blank")} />
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Go</Badge>
-                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Kubernetes</Badge>
-                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">gRPC</Badge>
-                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Redis</Badge>
-                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">AWS</Badge>
+                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">C#</Badge>
+                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Docker</Badge>
+                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">EF Core</Badge>
+                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">PostgreSQL</Badge>
                   </div>
                   <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <li>• Auto-scaling training clusters with cost optimization</li>
-                    <li>• Model versioning and A/B testing framework</li>
-                    <li>• Multi-cloud deployment with 99.9% uptime</li>
-                    <li>• Real-time monitoring and alerting system</li>
+                    <li>• Robust, privacy-preserving authentication and data safeguarding.</li>
+                    <li>• Engineered for impenetrable data integrity and tamper-proof storage.</li>
+                    <li>• Verifiable identity without revealing sensitive information.</li>
+                    <li>• Modular design for maintainability, flexibility, and future growth.</li>
                   </ul>
                 </div>
               </CardContent>
@@ -401,24 +374,11 @@ export default function Portfolio() {
                   <div>
                     <CardTitle className="text-xl mb-2">Computer Vision Pipeline</CardTitle>
                     <CardDescription className="text-base">
-                      Real-time object detection and tracking system for industrial quality control applications
+                      Data augmentation pipeline for real-time object detection and tracking system for industrial quality control.
                     </CardDescription>
                   </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
+                  <div className="ml-4 flex-shrink-0">
+                    <img src="/trifork-vector.png" alt="Trifork" className="h-8 w-auto cursor-pointer hover:scale-110 transition-all duration-300" onClick={() => window.open("https://trifork.com", "_blank")} />
                   </div>
                 </div>
               </CardHeader>
@@ -438,14 +398,17 @@ export default function Portfolio() {
                       Flask
                     </Badge>
                     <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      NVIDIA GPU
+                      Jetson Nano
+                    </Badge>
+                    <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                      Gradio
                     </Badge>
                   </div>
                   <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
                     <li>• Custom YOLO model with 95% detection accuracy</li>
-                    <li>• GPU-accelerated processing at 60 FPS</li>
-                    <li>• RESTful API for integration with existing systems</li>
-                    <li>• Automated defect classification and reporting</li>
+                    <li>• Data augmentation pipeline for training</li>
+                    <li>• Gradio interface for easier UX</li>
+                    <li>• Real-time object detection and tracking</li>
                   </ul>
                 </div>
               </CardContent>
@@ -455,26 +418,13 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-xl mb-2">High-Performance API Gateway</CardTitle>
+                    <CardTitle className="text-xl mb-2">Butter Chicken Chaos (GameJame)</CardTitle>
                     <CardDescription className="text-base">
-                      Rust-based API gateway handling millions of requests with advanced rate limiting and caching
+                     5 day solo game jame made in Unity. All the assets were created by me. The theme and special object was Unintentional Side Effects, and butter chicken.
                     </CardDescription>
                   </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
+                  <div className="ml-4 flex-shrink-0">
+                    <img src="/itch-vector.png" alt="itch.io" className="h-8 w-auto cursor-pointer hover:scale-110 transition-all duration-300" onClick={() => window.open("https://itch.io/jam/jame-gam-25/rate/1942001", "_blank")} />
                   </div>
                 </div>
               </CardHeader>
@@ -482,26 +432,23 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                      Rust
+                      C#
                     </Badge>
                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                      Tokio
+                      Unity
                     </Badge>
                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                      Redis
+                      Aseprite
                     </Badge>
                     <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                      Prometheus
-                    </Badge>
-                    <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                      Docker
+                      FL Studio
                     </Badge>
                   </div>
                   <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <li>• Sub-millisecond response times under high load</li>
-                    <li>• Advanced rate limiting with sliding window algorithm</li>
-                    <li>• Distributed caching with automatic invalidation</li>
-                    <li>• Comprehensive metrics and observability</li>
+                    <li>• 5 day solo game jame</li>
+                    <li>• Rogue-like game</li>
+                    <li>• WebGL build</li>
+                    <li>• Built in Unity</li>
                   </ul>
                 </div>
               </CardContent>
@@ -513,21 +460,22 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 bg-slate-900 dark:bg-slate-950">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Let's Build Something Amazing</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
           <div className="w-20 h-1 bg-emerald-600 mx-auto mb-8"></div>
           <p className="text-xl text-slate-300 mb-8 leading-relaxed">
             I'm always interested in discussing new opportunities, challenging projects, and innovative ideas. Whether
             you're looking to build scalable systems or implement cutting-edge ML solutions, let's connect.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700" onClick={() => window.open("mailto:danieltsutton@outlook.com", "_blank")}>
               <Mail className="mr-2 h-4 w-4" />
-              Send Message
+              Send Email
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="border-slate-600 text-slate-300 hover:bg-slate-800 bg-transparent"
+              onClick={() => window.open("https://www.linkedin.com/in/danieltsutton/", "_blank")}
             >
               <Linkedin className="mr-2 h-4 w-4" />
               Connect on LinkedIn
@@ -541,16 +489,16 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-400 mb-4 md:mb-0">
-              © 2024 Daniel Sutton.
+              © 2025 Daniel Sutton.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://github.com/terrell-byte" className="text-slate-400 hover:text-white transition-colors">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/danieltsutton/" className="text-slate-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a href="mailto:danieltsutton@outlook.com" className="text-slate-400 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
