@@ -111,8 +111,10 @@ export default function Portfolio() {
                   <Mail className="mr-2 h-4 w-4" />
                   Get In Touch
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open("", "_blank")}>
-                  Download CV
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/cv.pdf" download="Daniel_Sutton_CV.pdf">
+                    Download CV
+                  </a>
                 </Button>
               </div>
             </div>
