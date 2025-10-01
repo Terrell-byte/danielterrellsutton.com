@@ -113,7 +113,7 @@ export default function Portfolio() {
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <a href="/cv.pdf" download="Daniel_Sutton_CV.pdf">
-                    Download CV test
+                    Download CV
                   </a>
                 </Button>
               </div>
